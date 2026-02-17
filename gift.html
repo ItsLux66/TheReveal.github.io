@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coachella 2026</title>
+
   <style>
     body {
       margin: 0;
@@ -12,38 +13,83 @@
       text-align: center;
       background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
       color: #333;
+      opacity: 0;
+      animation: fadeInPage 2s ease forwards;
+    }
+
+    /* Page Fade In */
+    @keyframes fadeInPage {
+      to {
+        opacity: 1;
+      }
     }
 
     header {
       background: #ff99b3;
       color: #fff;
       padding: 40px 20px;
-      font-size: 32px;
+      font-size: 36px;
       font-weight: bold;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
+      position: relative;
+      animation: headerReveal 2s ease-out forwards;
+    }
+
+    /* Coachella 2026 Animation */
+    @keyframes headerReveal {
+      0% {
+        opacity: 0;
+        transform: translateY(-40px);
+        text-shadow: 0 0 0px #fff;
+      }
+      50% {
+        text-shadow: 0 0 20px #fff, 0 0 35px #ff66a3;
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+        text-shadow: 0 0 10px #fff;
+      }
     }
 
     main {
       max-width: 900px;
       margin: 0 auto;
-      padding: 50px 20px;
+      padding: 60px 20px;
     }
 
     h1 {
+      font-size: 42px;
       color: #ff6699;
-      font-size: 40px;
       margin-bottom: 30px;
+      animation: fadeText 3s ease forwards;
+    }
+
+    @keyframes fadeText {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     p {
       font-size: 20px;
-      line-height: 1.7;
+      line-height: 1.8;
       margin-bottom: 25px;
+      animation: fadeText 3s ease forwards;
     }
 
     .highlight {
       color: #ff6699;
       font-weight: bold;
+      font-size: 24px;
+    }
+
+    .screenshot {
+      max-width: 80%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      animation: fadeText 2.5s ease forwards;
     }
 
     .button {
@@ -55,49 +101,55 @@
       border-radius: 12px;
       text-decoration: none;
       margin-top: 30px;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     .button:hover {
       background-color: #ff85a0;
-    }
-
-    .screenshot {
-      max-width: 80%;
-      height: auto;
-      border-radius: 12px;
-      margin-bottom: 30px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #ff99b3;
     }
   </style>
 </head>
+
 <body>
+
   <header>🎶 Coachella 2026 🎶</header>
 
   <main>
-    <h1>Your Magical Reveal Awaits</h1>
 
-    <!-- Screenshot image -->
-    <img src="stub.png" alt="Your Screenshot" class="screenshot">
+    <h1>Happy One Year Anniversary ❤️</h1>
 
-    <!-- Cinematic narrative reveal -->
-    <p><span class="highlight">APRIL 11TH, 2026</span></p>
+    <img src="stub.png" alt="Festival Surprise" class="screenshot">
 
-    <p>Under the desert sky, the stage lights are waiting.<br>
-    The music swells, the crowd cheers, and the palms sway in rhythm.</p>
+    <p class="highlight">APRIL 11TH, 2026</p>
 
-    <p>We’ll be there together, front row to every moment,<br>
-    feeling the energy, the magic, the music pulsing through us.</p>
+    <p>
+      Under the desert sky, the lights glow brighter.
+      The music echoes across the palms.
+    </p>
 
-    <p>When Justin Bieber takes the stage,<br>
-    it won’t just be a concert—it’ll be our moment,<br>
-    our story, our celebration under the stars.</p>
+    <p>
+      Thousands of voices. One unforgettable night.
+      And the best part?
+    </p>
 
-    <p>Every beat, every cheer, every melody,<br>
-    a reminder that this is a day we’ll never forget.<br>
-    And the best part? I get to share it with you. ❤️</p>
+    <p>
+      I get to experience it all with you.
+    </p>
 
-    <a class="button" href="https://www.coachella.com/" target="_blank">Learn More About Coachella</a>
+    <p>
+      This isn’t just a festival.
+      It’s our moment.
+      Our memory.
+      Our story.
+    </p>
+
+    <a class="button" href="https://www.coachella.com/" target="_blank">
+      Explore Coachella
+    </a>
+
   </main>
+
 </body>
 </html>
